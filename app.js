@@ -83,6 +83,7 @@
     var meta = [];
     if (w.date) meta.push(w.date);
     if (w.tags && w.tags.length) meta.push(w.tags.map(function (t) { return "#" + t; }).join(" "));
+    if (w.role) meta.push("役職: " + w.role);
     if (w.credit) meta.push(w.credit);
     $("modal-meta").textContent = meta.join("\n");
     modal.hidden = false;
@@ -145,6 +146,7 @@
 
     var txt = el("span", "card-text");
     txt.appendChild(el("span", "card-title", w.title));
+    if (w.role) txt.appendChild(el("span", "card-role", w.role));
     var meta = [];
     if (w.date) meta.push(w.date);
     if (w.tags && w.tags.length) meta.push(w.tags.map(function (x) { return "#" + x; }).join(" "));
