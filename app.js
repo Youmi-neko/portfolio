@@ -49,6 +49,20 @@
     p.appendChild(document.createTextNode(PROFILE.note.slice(i + word.length)));
   })();
 
+  /* ---------- 受付状況 ---------- */
+  (function () {
+    if (typeof STATUS === "undefined") return;
+    var box = $("status");
+    var open = !!STATUS.open;
+    var text = open ? STATUS.label : STATUS.closedLabel;
+    if (STATUS.detail) text += "　" + STATUS.detail;
+    $("status-text").textContent = text;
+    box.className = "status-bar " + (open ? "open" : "closed");
+    $("status-mail").textContent = PROFILE.email;
+    $("status-mail").href = "mailto:" + PROFILE.email;
+    box.hidden = false;
+  })();
+
   /* ---------- モーダル ---------- */
   var modal = $("modal");
   var player = $("player");

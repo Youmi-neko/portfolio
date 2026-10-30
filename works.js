@@ -25,6 +25,14 @@ const PROFILE = {
   note: "スケジュールによっては、Karureでお受けできないかご相談させていただくことがあります。ご了承ください。"
 };
 
+// お仕事の受付状況（ページの上に出ます）
+const STATUS = {
+  open: true,                 // true = 受付中 / false = 受付停止中。ここを書き換えるだけで切り替わります
+  label: "お仕事受付中",
+  closedLabel: "現在、お仕事のご依頼をお休みしています",
+  detail: ""                  // 補足があるときだけ書く（例: "11月は満席です"）。いらなければ空のまま
+};
+
 const REEL = { title: "2026 REEL", youtube: "omorVhClIqc" };
 
 const WORKS = [
