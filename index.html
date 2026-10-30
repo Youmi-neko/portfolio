@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Youmi / ゆうみ | MV制作・映像ディレクション</title>
+<meta name="description" content="Youmi / ゆうみ の映像制作ポートフォリオ。MV制作／映像ディレクション。">
+<meta name="theme-color" content="#010104">
+<meta property="og:title" content="Youmi / ゆうみ | MV制作・映像ディレクション">
+<meta property="og:description" content="Youmi / ゆうみ の映像制作ポートフォリオ">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="head-left">
+    <h1 id="name"></h1>
+    <p id="role"></p>
+  </div>
+  <nav class="head-nav" aria-label="ページ内メニュー">
+    <a href="#works">Works</a>
+    <a href="#info">Info</a>
+  </nav>
+</header>
+
+<main>
+  <section class="reel" aria-label="Reel">
+    <button class="reel-play" id="reel" type="button" aria-label="2026 REELを再生">
+      <img id="reel-img" alt="" decoding="async">
+      <span class="reel-label" id="reel-label"></span>
+      <span class="play-mark" aria-hidden="true"></span>
+    </button>
+  </section>
+
+  <section id="works" aria-label="Works">
+    <div class="section-head">
+      <h2>Works <span class="count" id="count"></span></h2>
+      <div class="filter" id="filter" hidden></div>
+    </div>
+    <ul class="grid" id="grid"></ul>
+  </section>
+
+  <section id="info" class="info" aria-label="Info">
+    <h2>Info</h2>
+    <p id="note"></p>
+    <p class="contact">
+      <span>Contact</span>
+      <a id="mail" href="#"></a>
+    </p>
+    <p class="contact">
+      <span>X</span>
+      <a id="xlink" href="#" target="_blank" rel="noopener"></a>
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small id="copy"></small>
+  <a href="#top" class="to-top" aria-label="ページの先頭へ">↑</a>
+</footer>
+
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-body">
+    <button class="modal-close" type="button" data-close aria-label="閉じる">×</button>
+    <div class="player" id="player"></div>
+    <h3 id="modal-title"></h3>
+    <p class="modal-meta" id="modal-meta"></p>
+  </div>
+</div>
+
+<script src="works.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
